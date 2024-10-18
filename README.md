@@ -7,4 +7,6 @@ Product Gap Analysis
 
 ![image](https://github.com/user-attachments/assets/806dee9c-0b9c-475c-9b8f-8fbf8e8b5294)
 
+Performance Gap Analysis
 
+![image](https://github.com/user-attachments/assets/cc632f1d-a060-4074-bbad-0abdcc2a5a87)
