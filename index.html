@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Gap Analysis Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Gap Analysis Tool</h1>
+    <p>This tool allows you to perform a basic gap analysis for your organization. 
+       Use the information provided as a guide to input your own data and visualize the gaps.</p>
+
+    <div class="sidebar">
+      <h2>Gap Analysis Guide</h2>
+      <p>Gap analysis involves comparing actual performance with potential or desired performance.
+         It can be conducted from different perspectives:
+         - Organization (e.g., Human Resources)
+         - Business direction
+         - Business processes
+         - Information technology</p>
+    </div>
+
+    <div class="main-content">
+      <input type="text" id="organizationName" placeholder="Enter your organization name">
+      
+      <select id="analysisType">
+        <option value="usage">Usage Gap</option>
+        <option value="product">Product Gap</option>
+        <option value="performance">Performance Gap</option>
+      </select>
+
+      <div id="usageGap" class="analysis-section">
+        <h2>Usage Gap Analysis</h2>
+        <p>The usage gap is the difference between the total potential for the market and 
+           actual current usage by all consumers in the market.</p>
+        <input type="number" id="marketPotential" placeholder="Total market potential" value="100">
+        <input type="number" id="currentUsage" placeholder="Current market usage" value="75">
+        <canvas id="usageGapChart"></canvas>
+        <div id="usageGapResult"></div>
+      </div>
+
+      <div id="productGap" class="analysis-section" style="display:none;">
+        <h2>Product Gap Analysis</h2>
+        <p>The product gap is the part of the market an organization is excluded from due to 
+           product or service characteristics.</p>
+        <input type="number" id="totalSegments" placeholder="Total market segments" value="5">
+        <input type="number" id="coveredSegments" placeholder="Covered segments" value="3">
+        <canvas id="productGapChart"></canvas>
+        <div id="productGapResult"></div>
+      </div>
+
+      <div id="performanceGap" class="analysis-section" style="display:none;">
+        <h2>Performance Gap Analysis</h2>
+        <p>Performance gap analysis compares your current performance with your desired performance 
+           across various metrics.</p>
+        <textarea id="metrics" placeholder="Enter performance metrics (one per line)">Revenue
+Customer Satisfaction
+Market Share
+Productivity</textarea>
+        <div id="metricInputs"></div>
+        <canvas id="performanceGapChart"></canvas>
+        <div id="performanceGapResult"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
